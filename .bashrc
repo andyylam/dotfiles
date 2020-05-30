@@ -16,3 +16,4 @@ for filename in ~/.aliases/* ~/.completions/*; do
 	source $filename
 done
 
+source ~/.bash/sqpc.bashrc
