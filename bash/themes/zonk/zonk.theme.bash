@@ -26,14 +26,6 @@ else
     RESET="\033[m\]"
 fi
 
-GIT_THEME_PROMPT_DIRTY="\[${MAGENTA}\]✗"
-GIT_THEME_PROMPT_CLEAN=" \[${BOLD}\]${green}✓"
-GIT_THEME_PROMPT_PREFIX="${reset_color}on \[${PURPLE}\]["
-GIT_THEME_PROMPT_SUFFIX="\[${PURPLE}\]]"
-
-RVM_THEME_PROMPT_PREFIX="${reset_color}on ["
-RVM_THEME_PROMPT_SUFFIX="["
-
 function prompt_command() {
     PS1="\n${yellow}$(ruby_version_prompt)\[${MAGENTA}\]\h \[${ORANGE}\]\w\n\[${MAGENTA}\]$(scm_prompt_info) \[${reset_color}\]→${reset_color} "
 }
