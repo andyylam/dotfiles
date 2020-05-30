@@ -17,17 +17,17 @@ if tput setaf 1 &> /dev/null; then
     BOLD=$(tput bold)
     RESET=$(tput sgr0)
 else
-    MAGENTA="\033[1;31m\]"
-    ORANGE="\033[1;33m\]"
-    GREEN="\033[1;32m\]"
-    PURPLE="\033[1;35m\]"
-    WHITE="\033[1;37m\]"
-    BOLD=""
-    RESET="\033[m\]"
+    MAGENTA='\033[1;31m\]'
+    ORANGE='\033[1;33m\]'
+    GREEN='\033[1;32m\]'
+    PURPLE='\033[1;35m\]'
+    WHITE='\033[1;37m\]'
+    BOLD=''
+    RESET='\033[m\]'
 fi
 
 function prompt_command() {
-    PS1="\n${yellow}$(ruby_version_prompt)\[${MAGENTA}\]\h \[${ORANGE}\]\w\n\[${MAGENTA}\]$(scm_prompt_info) \[${reset_color}\]→${reset_color} "
+    PS1="\n${yellow}$(ruby_version_prompt)\[${MAGENTA}\]\h \[${ORANGE}\]\w\n\[${PURPLE}\]$(scm_prompt_info) ${reset_color}→${reset_color} "
 }
 
 PROMPT_COMMAND=prompt_command;
