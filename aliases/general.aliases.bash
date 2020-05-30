@@ -1,6 +1,3 @@
-cite about-alias
-about-alias 'general aliases'
-
 if ls --color -d . &> /dev/null
 then
   alias ls="ls --color=auto"

@@ -1,6 +1,3 @@
-cite 'about-alias'
-about-alias 'common git abbreviations'
-
 # Aliases
 alias gclean='git checkout -- .'
 alias ga='git add -A'

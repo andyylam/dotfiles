@@ -35,7 +35,7 @@ RVM_THEME_PROMPT_PREFIX="${reset_color}on ["
 RVM_THEME_PROMPT_SUFFIX="["
 
 function prompt_command() {
-    PS1="\n${yellow}$(ruby_version_prompt)\[${MAGENTA}\]\h \[${ORANGE}\]\w\n${cyan}$(scm_prompt_info) \[${reset_color}\]→${reset_color} "
+    PS1="\n${yellow}$(ruby_version_prompt)\[${MAGENTA}\]\h \[${ORANGE}\]\w\n\[${MAGENTA}\]$(scm_prompt_info) \[${reset_color}\]→${reset_color} "
 }
 
 PROMPT_COMMAND=prompt_command;
