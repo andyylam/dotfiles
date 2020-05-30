@@ -1,5 +1,7 @@
 source ~/.lib/composure.bash
 
+cite _about _param _example _group _author _version
+
 for filename in ~/.lib/*; do
 	source $filename
 done
