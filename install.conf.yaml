@@ -14,7 +14,7 @@
         ~/.bash_profile: .bash_profile
         ~/.tmux.conf: tmux/tmux.conf
         ~/.vim_runtime: vimrc/
-        ~/.tools: ~/workspace/twse_sbl/dse/scrapers/_tools/
+        ~/.tools: ~/workspace/sgx/dse/scrapers/_tools/
         ~/k: ~/.tools/de-bash/k
 
 - shell:
