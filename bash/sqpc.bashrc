@@ -1,8 +1,8 @@
-source ~/workspace/twse_sbl/dse/scrapers/_tools/de-bash/cloud.sh
-source ~/workspace/twse_sbl/dse/scrapers/_tools/de-bash/common.sh
-source ~/workspace/twse_sbl/dse/scrapers/_tools/de-bash/nomad.sh
-source ~/utils/pretty.sh
-source ~/workspace/twse_sbl/dse/scrapers/_tools/de-bash/psql.sh
+source ~/.tools/de-bash/cloud.sh
+source ~/.tools/de-bash/common.sh
+source ~/.tools/de-bash/nomad.sh
+source ~/.tools/de-bash/psql.sh
+
 source /opt/rh/rh-python36/enable
 export PATH=~/opt:$PATH
 export PATH=/lxhome/sapralak/nomad/:$PATH
