@@ -16,6 +16,7 @@
         ~/.vim_runtime: vimrc/
         ~/.tools: ~/workspace/sgx/dse/scrapers/_tools/
         ~/k: ~/.tools/de-bash/k
+        ~/.zshrc: .zshrc
 
 - shell:
         - [git submodule update --init --recursive, Installing submodules]
