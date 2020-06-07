@@ -74,4 +74,5 @@ done
 source ~/.vim_runtime/install_awesome_vimrc.sh
 source ~/.bash/sqpc.bashrc
 bindkey -v
+bindkey '^R' history-incremental-search-backward
 
