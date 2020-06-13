@@ -13,7 +13,7 @@
         ~/.lib: lib
         ~/.bash_profile: .bash_profile
         ~/.tmux.conf: tmux/tmux.conf
-        ~/.vimrc: vim/vimrc
+        ~/.vimrc: vim/main.vim
         ~/.vim: vim/vim/
 
 - shell:
