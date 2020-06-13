@@ -87,9 +87,8 @@ nmap <leader>P <Plug>yankstack_substitute_newer_paste
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fzf 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <leader>f :Files<CR>
+nmap <C-f> :Files<CR>
 nmap <leader>t :Buffer<CR>
-nmap <leader>l :Lines<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
