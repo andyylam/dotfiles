@@ -8,6 +8,7 @@
 "    -> Multicursor
 "    -> Yankstack
 "    -> Fzf
+"    -> Git fugitive
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -27,6 +28,7 @@ Plug 'preservim/nerdtree'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/peaksea'
 call plug#end()
 
@@ -42,6 +44,7 @@ map <leader>gd :YcmCompleter GoTo<CR>
 map <leader>gr :YcmCompleter GoToReferences<CR>
 map <leader>gt :YcmCompleter GoToType<CR>
 map <leader>gf :YcmCompleter FixIt<CR>
+map <leader>rr :YcmCompleter RefactorRename<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-smooth-scroll 
@@ -88,4 +91,9 @@ nmap <leader>f :Files<CR>
 nmap <leader>t :Buffer<CR>
 nmap <leader>l :Lines<CR>
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Git fugitive
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>gs :G<CR>
 
