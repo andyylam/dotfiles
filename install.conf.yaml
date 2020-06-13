@@ -13,10 +13,10 @@
         ~/.lib: lib
         ~/.bash_profile: .bash_profile
         ~/.tmux.conf: tmux/tmux.conf
-        ~/.vim_runtime: vimrc/
         ~/.tools: ~/workspace/sgx/dse/scrapers/_tools/
         ~/k: ~/.tools/de-bash/k
-        ~/.zshrc: .zshrc
+        ~/.vimrc: vim/main.vim
+        ~/.vim: vim/vim/
 
 - shell:
         - [git submodule update --init --recursive, Installing submodules]

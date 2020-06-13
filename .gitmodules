@@ -3,5 +3,5 @@
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
 [submodule "vimrc"]
-        path = vimrc
-        url = https://github.com/andyylam/vimrc.git
+    path = vimrc
+    url = https://github.com/andyylam/vimrc.git
