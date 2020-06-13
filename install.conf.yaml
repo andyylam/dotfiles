@@ -13,7 +13,8 @@
         ~/.lib: lib
         ~/.bash_profile: .bash_profile
         ~/.tmux.conf: tmux/tmux.conf
-        ~/.vim_runtime: vimrc/
+        ~/.vimrc: vim/vimrc
+        ~/.vim: vim/vim/
 
 - shell:
         - [git submodule update --init --recursive, Installing submodules]
