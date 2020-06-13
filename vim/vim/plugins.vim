@@ -1,7 +1,13 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sections:
 "    -> Enable vim-plug
-"
+"    -> Colorscheme
+"    -> YouCompleteMe
+"    -> Vim-smooth-scroll
+"    -> Nerd Tree
+"    -> Multicursor
+"    -> Yankstack
+"    -> Fzf
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -12,7 +18,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
-Plug 'ycm-core/YouCompleteMe'
+Plug 'valloric/YouCompleteMe'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-multiple-cursors'
@@ -33,6 +39,8 @@ colorscheme peaksea
 " => YouCompleteMe 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>gd :YcmCompleter GoTo<CR>
+map <leader>gr :YcmCompleter GoToReferences<CR>
+map <leader>gt :YcmCompleter GoToType<CR>
 map <leader>gf :YcmCompleter FixIt<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -79,3 +87,5 @@ nmap <leader>P <Plug>yankstack_substitute_newer_paste
 nmap <leader>f :Files<CR>
 nmap <leader>t :Buffer<CR>
 nmap <leader>l :Lines<CR>
+
+
