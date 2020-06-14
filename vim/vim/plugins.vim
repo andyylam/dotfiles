@@ -19,9 +19,8 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
-Plug 'valloric/YouCompleteMe'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'valloric/YouCompleteMe'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'preservim/nerdtree'
@@ -40,11 +39,11 @@ colorscheme peaksea
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => YouCompleteMe 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>gd :YcmCompleter GoTo<CR>
-map <leader>gr :YcmCompleter GoToReferences<CR>
-map <leader>gt :YcmCompleter GoToType<CR>
-map <leader>gf :YcmCompleter FixIt<CR>
-map <leader>rr :YcmCompleter RefactorRename<CR>
+" map <leader>gd :YcmCompleter GoTo<CR>
+" map <leader>gr :YcmCompleter GoToReferences<CR>
+" map <leader>gt :YcmCompleter GoToType<CR>
+" map <leader>gf :YcmCompleter FixIt<CR>
+" map <leader>rr :YcmCompleter RefactorRename<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-smooth-scroll 
@@ -87,9 +86,18 @@ nmap <leader>P <Plug>yankstack_substitute_newer_paste
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fzf 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <C-f> :Files<CR>
-nmap <leader>t :Buffer<CR>
+" nmap <C-f> :Files<CR>
+" nmap <leader>t :Buffer<CR>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Ctrl-p
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_map = '<C-f>'
+map <leader>j :CtrlP<cr>
+map <leader>b :CtrlPBuffer<cr>
+let g:ctrlp_max_height = 20
+let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git fugitive

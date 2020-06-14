@@ -10,7 +10,6 @@
 "    -> Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -202,7 +201,7 @@ map <leader>h :bprevious<cr>
 
 " Useful mappings for managing tabs
 map <leader>to :tabonly<cr>
-map <C-w> :tabclose<cr>
+map <leader>tc :tabclose<cr>
 map <leader>tn :tabnext<cr>
 
 " Let 'tl' toggle between this and the last accessed tab
