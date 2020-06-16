@@ -6,6 +6,7 @@ source ~/.tools/de-bash/psql.sh
 source /opt/rh/rh-python36/enable
 export PATH=~/opt:$PATH
 export PATH=/lxhome/sapralak/nomad/:$PATH
+export PATH=/lxhome/lamandy/.local/bin/:$PATH
 
 qu() {
     /opt/sp/qlib/3.6u.x86_64/q
@@ -14,4 +15,4 @@ qu() {
 q() {
     /opt/sp/qlib/3.6.x86_64/q
 }
- 
+
