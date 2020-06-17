@@ -36,6 +36,8 @@ set updatetime=50
 
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
+nnoremap <leader>+ :vertical resize +5<CR>
+nnoremap <leader>- :vertical resize -5<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -203,6 +205,7 @@ map <leader>h :bprevious<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tn :tabnext<cr>
+map <leader>tb :tabprevious<cr>
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1

@@ -22,33 +22,38 @@ Plug 'tpope/vim-fugitive'
 Plug 'valloric/YouCompleteMe'
 Plug 'junegunn/fzf', {'do': {-> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'preservim/nerdtree'
 Plug 'maxbrunsfeld/vim-yankstack'
-Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
+Plug 'sheerun/vim-polyglot'
+Plug 'airblade/vim-gitgutter'
+
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'deoplete-plugins/deoplete-jedi'
+
+Plug 'morhetz/gruvbox'
 Plug 'vim-scripts/peaksea'
 Plug 'joshdick/onedark.vim'
-Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colorscheme 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme onedark
+colorscheme gruvbox
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => YouCompleteMe 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>gd :YcmCompleter GoTo<CR>
+" map <leader>gd :YcmCompleter GoTo<CR>
 map <leader>gr :YcmCompleter GoToReferences<CR>
 map <leader>gt :YcmCompleter GoToType<CR>
-map <leader>gf :YcmCompleter FixIt<CR>
 map <leader>rr :YcmCompleter RefactorRename<CR>
+autocmd FileType python setlocal completeopt-=preview
+let g:jedi#completions_enabled = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-smooth-scroll 
@@ -95,25 +100,22 @@ nmap <C-f> :Files<CR>
 nmap <leader>b :Buffer<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Ctrl-p
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:ctrlp_working_path_mode = 0
-" let g:ctrlp_map = '<C-f>'
-" map <leader>j :CtrlP<cr>
-" map <leader>b :CtrlPBuffer<cr>
-" let g:ctrlp_max_height = 20
-" let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git fugitive
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>gs :G<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Ale
+" => Python Mode 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let b:ale_linters = ['pylint']
-let g:ale_fixers = ['autopep8', 'black', 'yapf', 'trim_whitespace', 'remove_trailing_lines', 'add_blank_lines_for_python_control_statements']
-let g:ale_set_highlights = 0
-highlight clear SignColumn
+let g:pymode_rope_goto_definition_bind = '<leader>gd'
+let g:pymode_breakpoint_bind = '<leader>d'
+nmap <leader>pf :PymodeLintAuto<CR>
+nmap <leader>pl :PymodeLint<CR>
+let g:pymode_lint_options_pep8 = {'max_line_length': 140}  
+let g:pymode_lint_on_write = 1
+let g:pymode_options_colorcolumn = 0
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => GitGutter
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:gitgutter_sign_removed = '-'
