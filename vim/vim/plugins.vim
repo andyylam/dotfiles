@@ -34,6 +34,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
 Plug 'Townk/vim-autoclose'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dense-analysis/ale'
 
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 
@@ -46,7 +47,6 @@ call plug#end()
 " => Colorscheme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme gruvbox
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
@@ -152,6 +152,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>") <CR><CR>
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -208,6 +209,15 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ALE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>qf :ALEFix<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Python
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>d :normal Oimport pdb;pdb.set_trace() # XXX - Breakpoint<esc><CR>
 nmap <leader>ds <Plug>(pydocstring)
 let g:pydocstring_formatter = 'google'
+let g:ale_fixes = ['black', 'reorder-python-import', 'trim-whitespace', 'prettier']
