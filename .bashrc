@@ -15,5 +15,4 @@ done
 HISTSIZE= 
 HISTFILESIZE=
 
-source ~/.bash/sqpc.bashrc
-alias vim="~/backupdotfiles/neovim/nvim.appimage"
+alias vim="nvim"
