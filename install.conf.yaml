@@ -13,8 +13,6 @@
         ~/.lib: lib
         ~/.bash_profile: .bash_profile
         ~/.tmux.conf: tmux/tmux.conf
-        ~/.tools: ~/workspace/sgx/dse/scrapers/_tools/
-        ~/k: ~/.tools/de-bash/k
         ~/.vimrc: vim/main.vim
         ~/.vim: vim/vim/
 
