@@ -17,8 +17,11 @@
 set history=500
 
 " Enable filetype plugins
-filetype plugin on
-filetype indent on
+filetype off 
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -36,8 +39,8 @@ set updatetime=50
 
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
-nnoremap <leader>+ :vertical resize +5<CR>
-nnoremap <leader>- :vertical resize -5<CR>
+nnoremap <leader>+ :vertical resize +10<CR>
+nnoremap <leader>- :vertical resize -10<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface

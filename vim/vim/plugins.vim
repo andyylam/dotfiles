@@ -34,9 +34,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
 Plug 'Townk/vim-autoclose'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'dense-analysis/ale'
-
-Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
+" Plug 'dense-analysis/ale'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'morhetz/gruvbox'
 Plug 'vim-scripts/peaksea'
@@ -46,7 +45,7 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colorscheme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme gruvbox
+colorscheme onedark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
@@ -75,16 +74,11 @@ let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Yankstack 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <leader>p <Plug>yankstack_substitute_older_paste
-nmap <leader>P <Plug>yankstack_substitute_newer_paste
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fzf 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <C-f> :Files<CR>
 nmap <leader>b :Buffer<CR>
+nmap <leader>rg :Rg<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git fugitive
@@ -212,12 +206,15 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ALE
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <leader>qf :ALEFix<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Python
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <leader>d :normal Oimport pdb;pdb.set_trace() # XXX - Breakpoint<esc><CR>
-nmap <leader>ds <Plug>(pydocstring)
-let g:pydocstring_formatter = 'google'
-let g:ale_fixes = ['black', 'reorder-python-import', 'trim-whitespace', 'prettier']
+" nmap <leader>qf :ALEFix<CR>
+" let g:ale_fixers = ['trim_whitespace', 'remove_trailing_lines', 'gofmt', 'goimports']
+let g:go_highlight_structs = 1 
+let g:go_highlight_methods = 1
+let g:go_highlight_functions = 1
+" let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_space_tab_error = 1
+let g:go_highlight_trailing_whitespace_error = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
