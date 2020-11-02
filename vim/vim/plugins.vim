@@ -36,7 +36,7 @@ Plug 'Townk/vim-autoclose'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 
-Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
+" Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 
 Plug 'morhetz/gruvbox'
 Plug 'vim-scripts/peaksea'
@@ -220,4 +220,4 @@ nmap <leader>qf :ALEFix<CR>
 nmap <leader>d :normal Oimport pdb;pdb.set_trace() # XXX - Breakpoint<esc><CR>
 nmap <leader>ds <Plug>(pydocstring)
 let g:pydocstring_formatter = 'google'
-let g:ale_fixes = ['black', 'reorder-python-import', 'trim-whitespace', 'prettier']
+let g:ale_fixers = { 'python': ['black', 'reorder-python-imports', 'trim_whitespace', 'prettier'], 'c': ['remove_trailing_lines', 'trim_whitespace', 'astyle','clangtidy'], 'sql': ['trim_whitespace', 'pgformatter'], 'javascript': ['eslint', 'trim_whitespace', 'prettier']}

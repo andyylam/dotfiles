@@ -10,3 +10,4 @@ export PATH
 # Locale settings necessary for Python3
 export LC_ALL="en_US.utf8"
 export LANG="en_US.utf8"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
