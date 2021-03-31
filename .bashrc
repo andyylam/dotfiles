@@ -14,7 +14,11 @@ done
 
 HISTSIZE= 
 HISTFILESIZE=
+export PATH=$PATH:/usr/local/opt/riscv-gnu-toolchain/bin
+
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 alias leet="cd /Users/andyylam/OneDrive\ -\ National\ University\ of\ Singapore/miscellaneous/applying\ for\ jobs/leet"
-alias sshtunnels="ssh -N -f -L 8889:localhost:8888 3244-2010-0031@3.128.91.128 && ssh -N -f -L 8888:localhost:8888 3244-2010-0031@ec2-18-190-83-29.us-east-2.compute.amazonaws.com"
+alias sunfire="ssh andy-lam@sunfire.comp.nus.edu.sg"
+alias climbgowhere="ssh root@139.59.122.73"
+alias vim="nvim"
